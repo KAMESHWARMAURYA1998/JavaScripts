@@ -1,0 +1,40 @@
+<html>
+    <head>
+    <script>
+        function validate_form()
+        {
+            var user_name = document.getElementById("uname");
+            var user_password = document.getElementById("upassword");
+            if(user_name.value.trim() == "")
+            {
+                alert("User Name Can not be Empty !");
+                return false;
+            }
+            else if(user_password.value.trim()=="")
+            {
+                alert("Password can not be empty");
+                return false;
+
+            }
+            else if(user_password.value.length<8)
+            {
+                alert("Paasword Should be grater than 8");
+                return false;
+            }
+            else  
+            {
+                return true;
+            }
+        }
+    </script>
+    
+    </head>
+    <body>
+        <form>
+            <input type="text" name="name" placeholder="Enter your username" id="uname"><br><br>
+            <input type="password" name="name" placeholder="Enter your username" id="upassword"><br><br>
+            <button type="submit" onclick="validate_form()"> Click Me</button>
+
+        </form>
+    </body>
+</html>
