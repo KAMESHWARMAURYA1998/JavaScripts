@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script>
+            function emailValidate()
+            {
+                var text = document.getElementById("email").value;
+                regx = /^([a-z A-z 0-9/.]+)@([a-z]+).([a-z])(.[a-z]?)$/;
+                if(regx.test(text))
+                {
+                    document.getElementById("level1").innerHTML = "Valid Email Id";
+                    document.getElementById("level1").style.color ="green";
+                    document.getElementById("level1").style.visibility = "visible";
+                }
+                else{
+                    document.getElementById("level1").innerHTML = "Invalid Email Id";
+                    document.getElementById("level1").style.color ="red";
+                    document.getElementById("level1").style.visibility = "visible";
+
+                }
+            }
+        </script>
+    </head>
+<body>
+    <input type="text" id ="email" placeholder="Email"> <br>
+    <label id="level1" style="color:red; visibility:hidden;">Invalid Email </label><br>
+    <button onclick="emailValidate()">Check</buttton>
+</body>
+</html>
