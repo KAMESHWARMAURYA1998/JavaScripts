@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script>
+            function mobileValidate()
+            {
+                var number = document.getElementById("number").value;
+                regx = /^[6-9][0-9]{9}$/
+                if(regx.test(number))
+                {
+                    alert("Valid Mobile number");
+                }
+                else 
+                {
+                    alert("invalid Mobile Number");
+                }
+            }
+        </script>    
+    </head>
+
+<body>
+    <input type="text" id="number" palceholder="Enter your 10 Digit Mobile Number"><br>
+    <button onclick="mobileValidate()">Check</button>
+</body>
+</html>
